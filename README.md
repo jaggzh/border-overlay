@@ -1,5 +1,6 @@
 # border-overlay
-Draws a box on the screen which won't catch mouse events
+Draws a box on the screen which won't catch mouse events.
+(This also demonstrates doing a screen overlay... that won't gobble your mouse clicks so they pass through to the underlying window).
 
 ![Screenshot](img/ss.png)
 
