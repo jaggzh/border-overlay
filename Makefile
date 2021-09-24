@@ -5,7 +5,7 @@ LDLIBS=$(shell pkg-config x11 --libs) -lXfixes -lcairo -lXcomposite -lXext
 all: cc
 
 cc:
-	g++ -o draw-border ${CFLAGS} draw-border.c ${LDLIBS} && ./draw-border
+	g++ -ggdb -o draw-border ${CFLAGS} draw-border.c ${LDLIBS} && ./draw-border
 
 vi:
 	vim Makefile draw-border.c

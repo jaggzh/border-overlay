@@ -18,8 +18,8 @@
 #include <unistd.h>
 
 // sizepos='764x410 -i :0+1052,166'
-int px=52, py=166;
-int sx=764, sy=510;
+int px=50, py=150;
+int sx=300, sy=200;
 int thick=3;
 
 Region CreateRegion(int x, int y, int w, int h);
@@ -75,6 +75,10 @@ int main(int argc, char *argv[]) {
 	}
 
 	Display *d = XOpenDisplay(NULL);
+	if (!d) {
+		fprintf(stderr, "Couldn't XOpenDisplay(); it returned NULL\n");
+		exit(1);
+	}
 	Window root = DefaultRootWindow(d);
 	//int default_screen = XDefaultScreen(d);
 
